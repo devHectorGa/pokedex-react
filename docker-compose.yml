@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   pokedex-react:
-    container_name: pokedex-react
+    container_name: pokedex-container
     build:
       context: .
       dockerfile: Dockerfile
