@@ -1,14 +1,20 @@
-import { useState } from 'react';
+import { lazy, Suspense } from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { Container } from './App.styles';
+import Spinner from './components/Spinner';
 
-import ListPokemon from './components/ListPokemon';
+const ListPokemon = lazy(() => import('./components/ListPokemon'));
+const Pokemon = lazy(() => import('./components/Pokemon'));
 
 function App() {
-  const [pokemon, setPokemon] = useState(null);
-
   return (
     <Container>
-      <ListPokemon />
+      <Switch>
+        <Suspense fallback={<Spinner />}>
+          <Route exact path="/" component={ListPokemon} />
+          <Route path="/:idPokemon" component={Pokemon} />
+        </Suspense>
+      </Switch>
     </Container>
   );
 }
