@@ -8,8 +8,8 @@ export const GlobalStyle = createGlobalStyle`
     --color4: #72A1A6;
     --color5: #F2F2F2;
 
-    --font-size: 2vmin + 1vmax;
-    --font-sise-laptop: 1vmin + 1vmax;
+    --font-size: calc(2vmin + 1vmax);
+    --font-sise-laptop: calc(1vmin + 1vmax);
   }
 
   html, body {

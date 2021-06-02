@@ -9,6 +9,7 @@ export const Container = styled.article`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  box-shadow: 0px 0px 8px 0px var(--color3);
 
   &:hover {
     opacity: 0.5;
