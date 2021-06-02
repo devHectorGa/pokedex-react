@@ -4,7 +4,7 @@ import { Container } from './App.styles';
 import Spinner from './components/Spinner';
 
 const ListPokemon = lazy(() => import('./components/ListPokemon'));
-const Pokemon = lazy(() => import('./components/Pokemon'));
+const Details = lazy(() => import('./components/Details'));
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Switch>
         <Suspense fallback={<Spinner />}>
           <Route exact path="/" component={ListPokemon} />
-          <Route path="/:idPokemon" component={Pokemon} />
+          <Route path="/:idPokemon" component={Details} />
         </Suspense>
       </Switch>
     </Container>
