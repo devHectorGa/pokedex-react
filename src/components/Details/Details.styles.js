@@ -36,7 +36,7 @@ export const Image = styled.img`
 `;
 
 export const Text = styled.p`
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 2rem;
   color: var(--color3);
   margin: 0.5rem;
@@ -44,6 +44,7 @@ export const Text = styled.p`
 
 export const StatText = styled(Text)`
   font-size: 1.5rem;
+  text-transform: lowercase;
 `;
 
 export const StatContainer = styled.div`

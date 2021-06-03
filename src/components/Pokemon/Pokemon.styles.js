@@ -22,7 +22,7 @@ export const Image = styled.img``;
 
 export const Text = styled.p`
   margin: 0;
-  text-transform: uppercase;
+  text-transform: capitalize;
 `;
 
 export const TypesContainer = styled.div`
