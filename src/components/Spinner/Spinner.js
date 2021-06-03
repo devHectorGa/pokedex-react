@@ -4,7 +4,7 @@ import { SpinnerOverlay, SpinnerContainer } from './Spinner.styles';
 
 const Spinner = (props) => (
   <SpinnerOverlay {...props}>
-    <SpinnerContainer />
+    <SpinnerContainer {...props} />
   </SpinnerOverlay>
 );
 
