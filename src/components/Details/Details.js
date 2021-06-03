@@ -7,6 +7,8 @@ import {
   Text,
   StatText,
   StatContainer,
+  TypesContainer,
+  Type,
 } from './Details.styles';
 import Spinner from '../Spinner';
 
@@ -32,6 +34,17 @@ export default function Details() {
         <Image src={url} alt={pokemon?.name} />
         {pokemon?.name ? (
           <Text>{`${idPokemon} - ${pokemon?.name}`}</Text>
+        ) : (
+          <Spinner small />
+        )}
+        {pokemon?.types ? (
+          <TypesContainer>
+            {pokemon.types.map((data) => (
+              <Type className={data.type.name} data={data} key={data.type.name}>
+                {data.type.name}
+              </Type>
+            ))}
+          </TypesContainer>
         ) : (
           <Spinner small />
         )}

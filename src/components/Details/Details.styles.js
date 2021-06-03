@@ -28,6 +28,7 @@ export const Section = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
+  position: relative;
 `;
 
 export const Image = styled.img`
@@ -51,4 +52,17 @@ export const StatContainer = styled.div`
   display: grid;
   grid-template-columns: 3fr 1fr;
   width: 80%;
+`;
+
+export const TypesContainer = styled.div`
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+`;
+
+export const Type = styled.div`
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 `;
