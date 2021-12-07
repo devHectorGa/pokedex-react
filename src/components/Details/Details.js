@@ -17,7 +17,7 @@ const BASE_PATH = process.env.REACT_APP_BASE_PATH;
 export default function Details() {
   const [pokemon, setPokemon] = useState(null);
   const { idPokemon } = useParams();
-  const url = `https://pokeres.bastionbot.org/images/pokemon/${idPokemon}.png`;
+  const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${idPokemon}.png`;
 
   useEffect(() => {
     (async () => {
